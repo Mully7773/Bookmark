@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    font-family: ${props => props.theme.fonts.primary};
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
         min-height: 100vh;

@@ -23,4 +23,9 @@ export const mainTheme = {
     focusOutline: palette.primary[400],
     ctaBtnBg: palette.primary[400],
   },
+  secondary: {
+    ctaNavBtn: palette.secondary[400],
+    ctaNavBtnHover: palette.secondary[400],
+    ctaNavBtnBorder: palette.secondary[400],
+  },
 };
