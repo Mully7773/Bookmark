@@ -1,5 +1,5 @@
 import BookmarkLogo from '../../../public/logo-bookmark.svg';
-import { StyledCtaLink } from '../../styles/UI/StyledCtaLink';
+import { StyledLoginLink } from '../../styles/UI/StyledLoginLink';
 import { StyledHeader } from '../../styles/Header/StyledHeader';
 import {
   StyledNavBarContainer,
@@ -26,7 +26,7 @@ const NavBar = () => {
               <a href='#'>contact</a>
             </li>
           </ul>
-          <StyledCtaLink secondary>login</StyledCtaLink>
+          <StyledLoginLink secondary>login</StyledLoginLink>
         </StyledNavigation>
       </StyledNavBarContainer>
     </StyledHeader>
