@@ -28,4 +28,7 @@ export const mainTheme = {
     ctaNavBtnHover: palette.secondary[400],
     ctaNavBtnBorder: palette.secondary[400],
   },
+  neutral: {
+    h1Color: palette.neutral[600],
+  },
 };

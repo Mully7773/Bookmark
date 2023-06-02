@@ -9,8 +9,13 @@ export const StyledNavBarContainer = styled.div`
 `;
 
 export const StyledLogoContainer = styled.div`
-  height: 2.4rem;
+  height: 2.6rem;
   width: auto;
+
+  & svg {
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export const StyledNavigation = styled.nav`
