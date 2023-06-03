@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
+import HeroIllustration from '../../../public/illustration-hero.svg';
 
 const StyledHeroLayout = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 62rem;
   align-items: center;
   justify-items: center;
   /* Temp */
@@ -19,7 +21,7 @@ const StyledLeftColumn = styled.div`
 `;
 
 const StyledHeroHeading = styled.h1`
-  font-size: 4.6rem;
+  font-size: 5rem;
   text-transform: capitalize;
   line-height: 1.2;
   color: ${props => props.theme.neutral.h1Color};
@@ -37,6 +39,17 @@ const StyledButtonGroup = styled.div`
   gap: 2rem;
 `;
 
+const StyledRightColumn = styled.div`
+  height: auto;
+  width: auto;
+
+  & svg {
+    transform: translateX(8rem);
+    height: 100%;
+    width: 100%;
+  }
+`;
+
 const Hero = () => {
   return (
     <StyledHeroLayout>
@@ -51,6 +64,11 @@ const Hero = () => {
           <StyledButton secondary>Get it on Firefox</StyledButton>
         </StyledButtonGroup>
       </StyledLeftColumn>
+      <StyledRightColumn>
+        <div>
+          <HeroIllustration />
+        </div>
+      </StyledRightColumn>
     </StyledHeroLayout>
   );
 };
