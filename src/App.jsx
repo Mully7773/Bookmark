@@ -3,6 +3,7 @@ import GlobalStyles from './styles/Global/GlobalStyles';
 import { base, mainTheme } from './themes/themes';
 import NavBar from './components/NavBar/NavBar';
 import Hero from './components/Hero/Hero';
+import MainWrapper from './components/Main/MainWrapper';
 
 const App = () => {
   const currentTheme = {
@@ -13,7 +14,9 @@ const App = () => {
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
       <NavBar />
-      <Hero />
+      <MainWrapper>
+        <Hero />
+      </MainWrapper>
     </ThemeProvider>
   );
 };

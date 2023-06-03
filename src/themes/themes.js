@@ -31,6 +31,7 @@ export const mainTheme = {
     focusOutline: palette.primary[400],
     ctaBtnBg: palette.primary[400],
     btnPrimary: palette.primary[400],
+    heroBg: palette.primary[400],
   },
   secondary: {
     ctaNavBtn: palette.secondary[400],

@@ -40,8 +40,16 @@ const StyledButtonGroup = styled.div`
 `;
 
 const StyledRightColumn = styled.div`
-  height: auto;
-  width: auto;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    left: 62%;
+    top: 40%;
+    background-color: ${props => props.theme.primary.heroBg};
+    border-radius: 50rem;
+  }
 
   & svg {
     transform: translateX(8rem);
