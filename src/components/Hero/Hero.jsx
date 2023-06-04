@@ -12,6 +12,7 @@ const StyledHeroLayout = styled.section`
   height: calc(100vh - 15rem);
   max-width: 110rem;
   margin: 0 auto;
+  padding-bottom: 55rem;
 `;
 
 const StyledLeftColumn = styled.div`
@@ -29,8 +30,6 @@ const StyledHeroHeading = styled.h1`
 `;
 
 const StyledSupplementaryParagraph = styled.p`
-  color: ${props => props.theme.neutral.pHeroColor};
-  font-size: 1.8rem;
   max-width: 50rem;
 `;
 

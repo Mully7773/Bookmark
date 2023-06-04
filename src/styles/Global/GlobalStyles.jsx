@@ -74,6 +74,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+p {
+  color: ${props => props.theme.neutral.pHeroColor};
+  font-size: 1.8rem;
+}
+
 li {
   list-style-type: none;
 }

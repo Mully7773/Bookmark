@@ -40,6 +40,7 @@ export const mainTheme = {
   },
   neutral: {
     h1Color: palette.neutral[600],
+    h2Color: palette.neutral[600],
     secondaryBtnOutlineHover: palette.neutral[600],
     secondaryBtnColor: palette.neutral[300],
     pHeroColor: palette.neutral[200],

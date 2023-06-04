@@ -4,6 +4,7 @@ import { base, mainTheme } from './themes/themes';
 import NavBar from './components/NavBar/NavBar';
 import Hero from './components/Hero/Hero';
 import MainWrapper from './components/Main/MainWrapper';
+import Features from './components/Features/Features';
 
 const App = () => {
   const currentTheme = {
@@ -16,6 +17,7 @@ const App = () => {
       <NavBar />
       <MainWrapper>
         <Hero />
+        <Features />
       </MainWrapper>
     </ThemeProvider>
   );
