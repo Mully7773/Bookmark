@@ -1,4 +1,4 @@
-import BookmarkLogo from '../../../public/logo-bookmark.svg';
+import BookmarkLogo from '/src/assets/logo-bookmark.svg';
 import { StyledLoginLink } from '../../styles/UI/StyledLoginLink';
 import { StyledHeader } from '../../styles/Header/StyledHeader';
 import {

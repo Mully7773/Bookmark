@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
-import HeroIllustration from '../../../public/illustration-hero.svg';
+import HeroIllustration from '/src/assets/illustration-hero.svg';
 
 const StyledHeroLayout = styled.section`
   display: grid;
