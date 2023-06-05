@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import FeaturesHeading from './FeaturesHeading';
+import FeaturesCarousel from './FeaturesCarousel';
 
 const StyledFeaturesSection = styled.section`
   display: grid;
@@ -14,6 +15,7 @@ const Features = () => {
   return (
     <StyledFeaturesSection>
       <FeaturesHeading />
+      <FeaturesCarousel />
     </StyledFeaturesSection>
   );
 };

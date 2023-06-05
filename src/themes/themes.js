@@ -37,13 +37,16 @@ export const mainTheme = {
     ctaNavBtn: palette.secondary[400],
     ctaNavBtnHover: palette.secondary[400],
     ctaNavBtnBorder: palette.secondary[400],
+    featuresBtnHoverActive: palette.secondary[400],
   },
   neutral: {
     h1Color: palette.neutral[600],
     h2Color: palette.neutral[600],
     secondaryBtnOutlineHover: palette.neutral[600],
+    featureBtnActive: palette.neutral[600],
     secondaryBtnColor: palette.neutral[300],
     pHeroColor: palette.neutral[200],
+    featuresBtn: palette.neutral[200],
     secondaryBtn: palette.neutral[100],
   },
 };

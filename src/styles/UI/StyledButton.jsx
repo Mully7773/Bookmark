@@ -29,4 +29,40 @@ export const StyledButton = styled.button`
         color: #000;
       }
     `}
+
+  ${props =>
+    props.features &&
+    css`
+      background-color: transparent;
+      color: ${props => props.theme.neutral.featuresBtn};
+      outline: none;
+      /* border-bottom: 0.1rem solid ${props =>
+        props.theme.neutral.featuresBtn}; */
+      border-radius: unset;
+      box-shadow: unset;
+      font-size: 1.6rem;
+      font-weight: 300;
+      letter-spacing: 0.05rem;
+      padding: 1.8rem 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:hover {
+        color: ${props => props.theme.secondary.featuresBtnHoverActive};
+      }
+    `}
+    ${props =>
+    props.features_active &&
+    css`
+      /* border-bottom: 0.3rem solid
+        ${props => props.theme.secondary.featuresBtnHoverActive}; */
+      color: ${props => props.theme.neutral.featureBtnActive};
+
+      &:hover {
+        color: unset;
+      }
+    `}
 `;
