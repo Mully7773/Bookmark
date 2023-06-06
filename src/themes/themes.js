@@ -1,3 +1,7 @@
+const bpSize = {
+  desktopL: '87.5em', //1400px
+};
+
 export const base = {
   fonts: {
     primary: 'Rubik, system-ui, sans-serif',
@@ -7,6 +11,9 @@ export const base = {
   },
   boxShadow: {
     button: '0px 12px 15px .5px rgba(0, 0, 0, 0.12)',
+  },
+  bp: {
+    desktopL: `only screen and (max-width: ${bpSize.desktopL})`,
   },
 };
 

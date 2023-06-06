@@ -4,7 +4,6 @@ import HeroIllustration from '/src/assets/illustration-hero.svg';
 
 const StyledHeroLayout = styled.section`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-columns: 1fr 62rem;
   align-items: center;
   justify-items: center;
@@ -12,7 +11,12 @@ const StyledHeroLayout = styled.section`
   height: calc(100vh - 15rem);
   max-width: 110rem;
   margin: 0 auto;
+  padding-top: 8rem;
   padding-bottom: 55rem;
+
+  @media ${props => props.theme.bp.desktopL} {
+    padding-top: 2rem;
+  }
 `;
 
 const StyledLeftColumn = styled.div`
@@ -44,7 +48,7 @@ const StyledRightColumn = styled.div`
     content: '';
     position: absolute;
     height: 75%;
-    width: 100%;
+    width: 100vw;
     left: 40%;
     top: 26%;
     background-color: ${props => props.theme.primary.heroBg};

@@ -6,7 +6,7 @@ import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 
 const StyledTabsContainer = styled.div`
-  padding: 5.2rem 0 8.2rem 0;
+  padding: 5.2rem 0 6rem 0;
   grid-column: 1 / -1;
   width: 70%;
   max-width: 85rem;
@@ -29,29 +29,34 @@ const StyledTabBar = styled(motion.div)`
   width: 100%;
 `;
 
-const StyledCarouselImgContainer = styled.div`
+const StyledCarouselContent = styled.div`
   position: relative;
-  & img {
-  }
+  height: 40rem;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 62rem 1fr;
+  align-items: center;
   &::before {
     content: '';
     position: absolute;
-    height: 90%;
+    height: 85%;
     width: 100vw;
-    right: 18%;
-    top: 26%;
+    right: 57%;
+    top: 25%;
     background-color: ${props => props.theme.primary.heroBg};
     border-radius: 50rem;
     z-index: -1;
   }
 `;
 
+const StyledCarouselImgContainer = styled.div``;
+
 const StyledCarouselTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  padding: 4rem;
+  padding: 1rem 0 4rem 3rem;
   & h2 {
     text-transform: unset;
   }
@@ -80,13 +85,15 @@ const FeaturesCarousel = () => {
           ))}
         </StyledCarouselControls>
       </StyledTabsContainer>
-      <StyledCarouselImgContainer>
-        <img src={selectedTab ? selectedTab.image : null} />
-      </StyledCarouselImgContainer>
-      <StyledCarouselTextContainer>
-        <h2> {selectedTab ? selectedTab.title : null}</h2>
-        <p> {selectedTab ? selectedTab.text : null} </p>
-      </StyledCarouselTextContainer>
+      <StyledCarouselContent>
+        <StyledCarouselImgContainer>
+          <img src={selectedTab ? selectedTab.image : null} />
+        </StyledCarouselImgContainer>
+        <StyledCarouselTextContainer>
+          <h2> {selectedTab ? selectedTab.title : null}</h2>
+          <p> {selectedTab ? selectedTab.text : null} </p>
+        </StyledCarouselTextContainer>
+      </StyledCarouselContent>
     </>
   );
 };
