@@ -29,7 +29,22 @@ const StyledTabBar = styled(motion.div)`
   width: 100%;
 `;
 
-const StyledCarouselImgContainer = styled.div``;
+const StyledCarouselImgContainer = styled.div`
+  position: relative;
+  & img {
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 100vw;
+    right: 18%;
+    top: 26%;
+    background-color: ${props => props.theme.primary.heroBg};
+    border-radius: 50rem;
+    z-index: -1;
+  }
+`;
 
 const StyledCarouselTextContainer = styled.div`
   display: flex;

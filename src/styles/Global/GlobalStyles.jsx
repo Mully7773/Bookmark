@@ -31,7 +31,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    overflow-x: hidden;
     font-family: ${props => props.theme.fonts.primary};
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;

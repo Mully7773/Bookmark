@@ -39,13 +39,14 @@ const StyledButtonGroup = styled.div`
 `;
 
 const StyledRightColumn = styled.div`
+  position: relative;
   &::before {
     content: '';
     position: absolute;
-    height: 50%;
+    height: 75%;
     width: 100%;
-    left: 62%;
-    top: 40%;
+    left: 40%;
+    top: 26%;
     background-color: ${props => props.theme.primary.heroBg};
     border-radius: 50rem;
   }
