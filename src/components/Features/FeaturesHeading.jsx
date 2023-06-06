@@ -7,14 +7,6 @@ const FeaturesHeadingContainer = styled.div`
   gap: 2rem;
   text-align: center;
   width: 50%;
-
-  & h2 {
-    text-transform: capitalize;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    font-size: 3rem;
-    color: ${props => props.theme.neutral.h2Color};
-  }
 `;
 
 const FeaturesHeading = () => {

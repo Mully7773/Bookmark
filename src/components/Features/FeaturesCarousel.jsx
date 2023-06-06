@@ -5,8 +5,8 @@ import { featuresData } from '../../featuresData';
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 
-const StyledCarouselContainer = styled.div`
-  padding: 5.2rem 0;
+const StyledTabsContainer = styled.div`
+  padding: 5.2rem 0 8.2rem 0;
   grid-column: 1 / -1;
   width: 70%;
   max-width: 85rem;
@@ -29,28 +29,50 @@ const StyledTabBar = styled(motion.div)`
   width: 100%;
 `;
 
+const StyledCarouselImgContainer = styled.div``;
+
+const StyledCarouselTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem;
+  & h2 {
+    text-transform: unset;
+  }
+`;
+
 const FeaturesCarousel = () => {
   const [selectedTab, setSelectedTab] = useState(featuresData[0]);
   return (
-    <StyledCarouselContainer>
-      <StyledCarouselControls>
-        {featuresData.map(feature => (
-          <Fragment key={feature.title}>
-            <StyledButton
-              features_active={selectedTab === feature}
-              features
-              type='button'
-              onClick={() => setSelectedTab(feature)}
-            >
-              {feature.button}
-              {feature === selectedTab ? (
-                <StyledTabBar layoutId='underline' />
-              ) : null}
-            </StyledButton>
-          </Fragment>
-        ))}
-      </StyledCarouselControls>
-    </StyledCarouselContainer>
+    <>
+      <StyledTabsContainer>
+        <StyledCarouselControls>
+          {featuresData.map(feature => (
+            <Fragment key={feature.title}>
+              <StyledButton
+                features_active={selectedTab === feature}
+                features
+                type='button'
+                onClick={() => setSelectedTab(feature)}
+              >
+                {feature.button}
+                {feature === selectedTab ? (
+                  <StyledTabBar layoutId='underline' />
+                ) : null}
+              </StyledButton>
+            </Fragment>
+          ))}
+        </StyledCarouselControls>
+      </StyledTabsContainer>
+      <StyledCarouselImgContainer>
+        <img src={selectedTab ? selectedTab.image : null} />
+      </StyledCarouselImgContainer>
+      <StyledCarouselTextContainer>
+        <h2> {selectedTab ? selectedTab.title : null}</h2>
+        <p> {selectedTab ? selectedTab.text : null} </p>
+      </StyledCarouselTextContainer>
+    </>
   );
 };
 

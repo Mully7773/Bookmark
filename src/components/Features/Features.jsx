@@ -9,6 +9,7 @@ const StyledFeaturesSection = styled.section`
   max-width: 110rem;
   justify-items: center;
   align-items: center;
+  padding-bottom: 6rem;
 `;
 
 const Features = () => {

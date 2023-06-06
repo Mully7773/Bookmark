@@ -49,6 +49,7 @@ export const StyledButton = styled.button`
       align-items: center;
       justify-content: center;
       position: relative;
+      transition: all 0.3s;
 
       &:hover {
         color: ${props => props.theme.secondary.featuresBtnHoverActive};
@@ -57,10 +58,8 @@ export const StyledButton = styled.button`
     ${props =>
     props.features_active &&
     css`
-      /* border-bottom: 0.3rem solid
-        ${props => props.theme.secondary.featuresBtnHoverActive}; */
       color: ${props => props.theme.neutral.featureBtnActive};
-
+      font-weight: 500;
       &:hover {
         color: unset;
       }
