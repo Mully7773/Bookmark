@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import FeaturesHeading from './FeaturesHeading';
 import FeaturesCarousel from './FeaturesCarousel';
+import { easeInOut, motion } from 'framer-motion';
 
-const StyledFeaturesSection = styled.section`
+const StyledFeaturesSection = styled(motion.section)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* grid-template-rows: 1fr 1fr 50rem; */
@@ -16,7 +17,18 @@ const StyledFeaturesSection = styled.section`
 
 const Features = () => {
   return (
-    <StyledFeaturesSection>
+    <StyledFeaturesSection
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          delay: 0.3,
+          duration: 1,
+          ease: easeInOut,
+        },
+      }}
+      viewport={{ once: true }}
+    >
       <FeaturesHeading />
       <FeaturesCarousel />
     </StyledFeaturesSection>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import HeroIllustration from '/src/assets/illustration-hero.svg';
+import { easeInOut, easeOut, motion } from 'framer-motion';
 
 const StyledHeroLayout = styled.section`
   display: grid;
@@ -19,7 +20,7 @@ const StyledHeroLayout = styled.section`
   }
 `;
 
-const StyledLeftColumn = styled.div`
+const StyledLeftColumn = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -42,7 +43,7 @@ const StyledButtonGroup = styled.div`
   gap: 2rem;
 `;
 
-const StyledRightColumn = styled.div`
+const StyledRightColumn = styled(motion.div)`
   position: relative;
   &::before {
     content: '';
@@ -65,7 +66,11 @@ const StyledRightColumn = styled.div`
 const Hero = () => {
   return (
     <StyledHeroLayout>
-      <StyledLeftColumn>
+      <StyledLeftColumn
+        initial={{ x: '-100%', opacity: 0 }}
+        animate={{ x: '0', opacity: 1 }}
+        transition={{ duration: 1, ease: easeOut }}
+      >
         <StyledHeroHeading>a simple bookmark manager</StyledHeroHeading>
         <StyledSupplementaryParagraph>
           A clean and simple interface to organize your favourite websites. Open
@@ -76,7 +81,11 @@ const Hero = () => {
           <StyledButton secondary>Get it on Firefox</StyledButton>
         </StyledButtonGroup>
       </StyledLeftColumn>
-      <StyledRightColumn>
+      <StyledRightColumn
+        initial={{ x: '100%', opacity: 0 }}
+        animate={{ x: '0', opacity: 1 }}
+        transition={{ duration: 1, ease: easeOut }}
+      >
         <div>
           <HeroIllustration />
         </div>
