@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import { featuresData } from '../../featuresData';
 import { Fragment } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, easeInOut, motion } from 'framer-motion';
 
 const StyledTabsContainer = styled.div`
   padding: 5.2rem 0 6rem 0;
@@ -49,9 +49,9 @@ const StyledCarouselContent = styled.div`
   }
 `;
 
-const StyledCarouselImgContainer = styled.div``;
+const StyledCarouselImgContainer = styled(motion.div)``;
 
-const StyledCarouselTextContainer = styled.div`
+const StyledCarouselTextContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +59,10 @@ const StyledCarouselTextContainer = styled.div`
   padding: 1rem 0 4rem 3rem;
   & h2 {
     text-transform: unset;
+  }
+
+  & p {
+    margin-bottom: 2.5rem;
   }
 `;
 
@@ -86,13 +90,30 @@ const FeaturesCarousel = () => {
         </StyledCarouselControls>
       </StyledTabsContainer>
       <StyledCarouselContent>
-        <StyledCarouselImgContainer>
-          <img src={selectedTab ? selectedTab.image : null} />
-        </StyledCarouselImgContainer>
-        <StyledCarouselTextContainer>
-          <h2> {selectedTab ? selectedTab.title : null}</h2>
-          <p> {selectedTab ? selectedTab.text : null} </p>
-        </StyledCarouselTextContainer>
+        <AnimatePresence mode='wait'>
+          <StyledCarouselImgContainer
+            key={selectedTab ? selectedTab.title : null}
+            initial={{ x: -15, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -15, opacity: 0 }}
+            transition={{ duration: 0.5, ease: easeInOut }}
+          >
+            <img src={selectedTab ? selectedTab.image : null} />
+          </StyledCarouselImgContainer>
+        </AnimatePresence>
+        <AnimatePresence mode='wait'>
+          <StyledCarouselTextContainer
+            key={selectedTab ? selectedTab.title : null}
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            transition={{ duration: 0.5, ease: easeInOut }}
+          >
+            <h2> {selectedTab ? selectedTab.title : null}</h2>
+            <p> {selectedTab ? selectedTab.text : null} </p>
+            <StyledButton more>more info</StyledButton>
+          </StyledCarouselTextContainer>
+        </AnimatePresence>
       </StyledCarouselContent>
     </>
   );

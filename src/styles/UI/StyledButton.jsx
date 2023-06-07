@@ -43,7 +43,7 @@ export const StyledButton = styled.button`
       font-size: 1.6rem;
       font-weight: 300;
       letter-spacing: 0.05rem;
-      padding: 1.8rem 0;
+      padding: 1.7rem 0;
       width: 100%;
       display: flex;
       align-items: center;
@@ -60,6 +60,15 @@ export const StyledButton = styled.button`
     css`
       color: ${props => props.theme.neutral.featureBtnActive};
       font-weight: 500;
+      &:hover {
+        color: unset;
+      }
+    `}
+    ${props =>
+    props.more &&
+    css`
+      text-transform: capitalize;
+      width: fit-content;
       &:hover {
         color: unset;
       }
