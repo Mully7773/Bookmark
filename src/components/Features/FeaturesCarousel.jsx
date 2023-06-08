@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
-import { featuresData } from '../../featuresData';
+import { featuresData } from '../../data/featuresData';
 import { Fragment } from 'react';
 import { AnimatePresence, easeInOut, motion } from 'framer-motion';
 
