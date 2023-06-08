@@ -1,7 +1,6 @@
-import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import HeroIllustration from '/src/assets/illustration-hero.svg';
-import { easeOut, motion } from 'framer-motion';
+import { easeOut } from 'framer-motion';
 import { StyledHeroLayout } from '../../styles/Hero/StyledHeroLayout';
 import {
   StyledLeftColumn,
