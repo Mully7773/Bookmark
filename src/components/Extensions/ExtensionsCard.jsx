@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion, easeInOut } from 'framer-motion';
 import { extensionsData } from '../../data/extensionsData';
 import { StyledButton } from '../../styles/UI/StyledButton';
 
-const StyledExtensionCard = styled.div`
+const StyledExtensionCard = styled(motion.div)`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -56,9 +57,21 @@ const StyledExtensionCard = styled.div`
 const ExtensionsCard = () => {
   return (
     <>
-      {extensionsData.map((card, index) => {
+      {extensionsData.map(card => {
         return (
-          <StyledExtensionCard key={card.title}>
+          <StyledExtensionCard
+            key={card.title}
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 1,
+                ease: easeInOut,
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <header>
               <img src={card.image} />
             </header>
