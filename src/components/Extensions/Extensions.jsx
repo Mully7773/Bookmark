@@ -7,10 +7,14 @@ const StyledExtensionsSection = styled(motion.section)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  max-width: 110rem;
+  max-width: 100rem;
   justify-items: center;
   align-items: center;
-  padding-bottom: 12rem;
+  padding-bottom: 20rem;
+
+  & p {
+    margin-bottom: 4rem;
+  }
 `;
 
 const Extensions = () => {

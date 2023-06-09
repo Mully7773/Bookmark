@@ -86,6 +86,12 @@ h2 {
     color: ${props => props.theme.neutral.h2Color};
 }
 
+h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
 li {
   list-style-type: none;
 }

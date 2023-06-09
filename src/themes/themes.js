@@ -8,6 +8,7 @@ export const base = {
   },
   borderRadius: {
     button: '0.4rem',
+    cards: '1.2rem',
   },
   boxShadow: {
     button: '0px 12px 15px .5px rgba(0, 0, 0, 0.12)',
