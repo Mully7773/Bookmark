@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import FaqHeading from './FaqHeading';
+import FaqContent from './FaqContent';
 
 const StyledFaqSection = styled(motion.section)`
   display: grid;
@@ -10,12 +11,19 @@ const StyledFaqSection = styled(motion.section)`
   justify-items: center;
   align-items: center;
   padding-bottom: 18rem;
+
+  & div {
+    & p {
+      margin-bottom: 4rem;
+    }
+  }
 `;
 
 const Faq = () => {
   return (
     <StyledFaqSection>
       <FaqHeading />
+      <FaqContent />
     </StyledFaqSection>
   );
 };

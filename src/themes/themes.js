@@ -28,6 +28,7 @@ const palette = {
   },
   neutral: {
     100: 'hsl(180, 9.090909090909067%, 97.84313725490196%)',
+    150: '#e3e4e8',
     200: 'hsl(229, 8%, 60%)',
     300: '#485489',
     600: 'hsl(229, 31%, 21%)',
@@ -40,6 +41,7 @@ export const mainTheme = {
     ctaBtnBg: palette.primary[400],
     btnPrimary: palette.primary[400],
     heroBg: palette.primary[400],
+    faqChevronDefault: palette.primary[400],
   },
   secondary: {
     ctaNavBtn: palette.secondary[400],
@@ -52,9 +54,11 @@ export const mainTheme = {
     h2Color: palette.neutral[600],
     secondaryBtnOutlineHover: palette.neutral[600],
     featureBtnActive: palette.neutral[600],
+    faqBtn: palette.neutral[600],
     secondaryBtnColor: palette.neutral[300],
     pHeroColor: palette.neutral[200],
     featuresBtn: palette.neutral[200],
+    faqBorders: palette.neutral[150],
     secondaryBtn: palette.neutral[100],
   },
 };

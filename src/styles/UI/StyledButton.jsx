@@ -73,4 +73,23 @@ export const StyledButton = styled.button`
         color: unset;
       }
     `}
+    ${props =>
+    props.faqBtn &&
+    css`
+    font-size: 1.6rem;
+    font-weight: 400;
+      display: flex;
+      background-color: unset;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+      color: ${props => props.theme.neutral.faqBtn};
+      box-shadow: unset;
+      width: 100%;
+    padding: 23px 24px 19px 0;
+};
+      &:hover {
+        color: unset;
+      }
+    `}
 `;
