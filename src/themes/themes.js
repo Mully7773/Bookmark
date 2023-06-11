@@ -48,6 +48,7 @@ export const mainTheme = {
     ctaNavBtnHover: palette.secondary[400],
     ctaNavBtnBorder: palette.secondary[400],
     featuresBtnHoverActive: palette.secondary[400],
+    faqChevronOpen: palette.secondary[400],
   },
   neutral: {
     h1Color: palette.neutral[600],
@@ -55,6 +56,7 @@ export const mainTheme = {
     secondaryBtnOutlineHover: palette.neutral[600],
     featureBtnActive: palette.neutral[600],
     faqBtn: palette.neutral[600],
+    faqChevronHover: palette.neutral[600],
     secondaryBtnColor: palette.neutral[300],
     pHeroColor: palette.neutral[200],
     featuresBtn: palette.neutral[200],
