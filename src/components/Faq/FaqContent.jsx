@@ -1,15 +1,7 @@
 import { useState } from 'react';
 import { faqData } from '../../data/faqData';
 import FaqAccordion from './FaqAccordion';
-import styled from 'styled-components';
-
-const StyledAccordionList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  max-width: 57rem;
-  width: 100%;
-  gap: 0.6rem;
-`;
+import { StyledAccordionList } from '../../styles/Faq/StyledFaqContent';
 
 const FaqContent = () => {
   const [expanded, setExpanded] = useState(faqData[0]);

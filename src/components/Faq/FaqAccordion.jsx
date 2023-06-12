@@ -1,45 +1,11 @@
-import styled, { css } from 'styled-components';
 import Chevron from '/src/assets/chevron-down.svg';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import { AnimatePresence, motion } from 'framer-motion';
-
-const StyledAccordionItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border-bottom: 1px solid ${props => props.theme.neutral.faqBorders};
-
-  ${props =>
-    props.first &&
-    css`
-      border-top: 1px solid ${props => props.theme.neutral.faqBorders};
-    `}
-`;
-
-const StyledChevronContainer = styled(motion.div)`
-  & svg {
-    stroke: ${props => props.theme.primary.faqChevronDefault};
-    height: 2.8rem;
-    width: auto;
-    transition: all 0.3s;
-
-    &:hover {
-      stroke: ${props => props.theme.neutral.faqChevronHover};
-    }
-  }
-  ${props =>
-    props.isOpen &&
-    css`
-      & svg {
-        stroke: ${props => props.theme.secondary.faqChevronOpen};
-        transform: rotate(180deg);
-      }
-    `}
-`;
-
-const StyledAccordionContentContainer = styled(motion.div)``;
+import {
+  StyledAccordionItem,
+  StyledChevronContainer,
+  StyledAccordionContentContainer,
+} from '../../styles/Faq/StyledFaqAccordion';
 
 const FaqAccordion = ({ faq, i, expanded, setExpanded }) => {
   const isOpen = i === expanded;

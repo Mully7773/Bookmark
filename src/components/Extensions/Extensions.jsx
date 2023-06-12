@@ -1,21 +1,7 @@
-import { motion, easeInOut } from 'framer-motion';
-import styled from 'styled-components';
+import { easeInOut } from 'framer-motion';
 import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
 import ExtensionsCard from './ExtensionsCard';
-
-const StyledExtensionsSection = styled(motion.section)`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0 auto;
-  max-width: 100rem;
-  justify-items: center;
-  align-items: center;
-  padding-bottom: 20rem;
-
-  & p {
-    margin-bottom: 4rem;
-  }
-`;
+import { StyledExtensionsSection } from '../../styles/Extensions/StyledExtensionsLayout';
 
 const Extensions = () => {
   return (
