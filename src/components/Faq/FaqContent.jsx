@@ -12,7 +12,8 @@ const StyledAccordionList = styled.ul`
 `;
 
 const FaqContent = () => {
-  const [expanded, setExpanded] = useState(0);
+  const [expanded, setExpanded] = useState(faqData[0]);
+
   return (
     <StyledAccordionList>
       {faqData.map((faq, i) => {
