@@ -6,4 +6,5 @@ export const StyledAccordionList = styled.ul`
   max-width: 57rem;
   width: 100%;
   gap: 0.6rem;
+  margin-bottom: 6rem;
 `;

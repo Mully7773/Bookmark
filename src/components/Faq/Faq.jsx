@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FaqHeading from './FaqHeading';
 import FaqContent from './FaqContent';
 import { StyledFaqSection } from '../../styles/Faq/StyledFaqLayout';
+import { StyledButton } from '../../styles/UI/StyledButton';
 
 const Faq = () => {
   return (
@@ -20,6 +21,7 @@ const Faq = () => {
     >
       <FaqHeading />
       <FaqContent />
+      <StyledButton>More Info</StyledButton>
     </StyledFaqSection>
   );
 };

@@ -42,6 +42,7 @@ export const mainTheme = {
     btnPrimary: palette.primary[400],
     heroBg: palette.primary[400],
     faqChevronDefault: palette.primary[400],
+    ctaBg: palette.primary[400],
   },
   secondary: {
     ctaNavBtn: palette.secondary[400],

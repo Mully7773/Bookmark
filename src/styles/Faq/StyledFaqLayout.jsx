@@ -8,7 +8,7 @@ export const StyledFaqSection = styled(motion.section)`
   max-width: 110rem;
   justify-items: center;
   align-items: center;
-  padding-bottom: 18rem;
+  padding-bottom: 11rem;
 
   & div {
     & p {

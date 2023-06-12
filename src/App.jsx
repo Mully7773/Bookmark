@@ -7,6 +7,7 @@ import MainWrapper from './components/Main/MainWrapper';
 import Features from './components/Features/Features';
 import Extensions from './components/Extensions/Extensions';
 import Faq from './components/Faq/Faq';
+import Cta from './components/Cta/Cta';
 
 const App = () => {
   const currentTheme = {
@@ -22,6 +23,7 @@ const App = () => {
         <Features />
         <Extensions />
         <Faq />
+        <Cta />
       </MainWrapper>
     </ThemeProvider>
   );
