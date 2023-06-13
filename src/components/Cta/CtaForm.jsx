@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
+import { useState } from 'react';
 
 const StyledLoginForm = styled.form`
   & div {
@@ -32,19 +33,50 @@ const StyledLoginForm = styled.form`
   }
 `;
 
+const INITIAL_FORM_STATE = {
+  email: '',
+};
+
 const CtaForm = () => {
+  const [form, setForm] = useState(INITIAL_FORM_STATE);
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleChange = e => {
+    setForm({
+      ...form,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleFormSubmission = e => {
+    e.preventDefault();
+    const userEmail = {
+      email: form.email,
+    };
+    console.log(userEmail);
+
+    setForm(INITIAL_FORM_STATE);
+    setSubscribed(prevState => !prevState.subscribed);
+  };
   return (
-    <StyledLoginForm>
-      <div>
-        <input
-          placeholder='Enter your email address'
-          required
-          id='email'
-          type='text'
-        />
-        <StyledButton ctaBtn>subscribe</StyledButton>
-      </div>
-    </StyledLoginForm>
+    <>
+      {!subscribed && (
+        <StyledLoginForm onSubmit={handleFormSubmission}>
+          <div>
+            <input
+              placeholder='Enter your email address'
+              required
+              id='email'
+              type='text'
+              value={form.email}
+              onChange={handleChange}
+            />
+            <StyledButton ctaBtn>subscribe</StyledButton>
+          </div>
+        </StyledLoginForm>
+      )}
+      {subscribed && <p>Welcome! Thanks for subscribing!</p>}
+    </>
   );
 };
 
