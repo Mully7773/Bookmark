@@ -92,4 +92,15 @@ export const StyledButton = styled.button`
         color: unset;
       }
     `}
+    ${props =>
+    props.ctaBtn &&
+    css`
+      text-transform: capitalize;
+      outline: solid 2px ${props => props.theme.secondary.ctaBtn};
+      background-color: ${props => props.theme.secondary.ctaBtn} !important;
+      &:hover {
+        color: ${props => props.theme.secondary.ctaBtn};
+        background-color: #fff !important;
+      }
+    `}
 `;

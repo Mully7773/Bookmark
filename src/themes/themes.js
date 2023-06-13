@@ -9,6 +9,7 @@ export const base = {
   borderRadius: {
     button: '0.4rem',
     cards: '1.2rem',
+    input: '0.4rem',
   },
   boxShadow: {
     button: '0px 12px 15px .5px rgba(0, 0, 0, 0.12)',
@@ -50,6 +51,8 @@ export const mainTheme = {
     ctaNavBtnBorder: palette.secondary[400],
     featuresBtnHoverActive: palette.secondary[400],
     faqChevronOpen: palette.secondary[400],
+    ctaBtn: palette.secondary[400],
+    inputFocus: palette.secondary[400],
   },
   neutral: {
     h1Color: palette.neutral[600],
