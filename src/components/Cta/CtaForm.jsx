@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import { useState } from 'react';
+import { easeInOut, motion } from 'framer-motion';
 
-const StyledLoginForm = styled.form`
+const StyledCtaForm = styled.form`
   & div {
     display: flex;
     gap: 2.5rem;
@@ -33,6 +34,13 @@ const StyledLoginForm = styled.form`
   }
 `;
 
+const StyledWelcomeMessage = styled(motion.p)`
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 1rem;
+`;
+
 const INITIAL_FORM_STATE = {
   email: '',
 };
@@ -61,7 +69,7 @@ const CtaForm = () => {
   return (
     <>
       {!subscribed && (
-        <StyledLoginForm onSubmit={handleFormSubmission}>
+        <StyledCtaForm onSubmit={handleFormSubmission}>
           <div>
             <input
               placeholder='Enter your email address'
@@ -73,9 +81,17 @@ const CtaForm = () => {
             />
             <StyledButton ctaBtn>subscribe</StyledButton>
           </div>
-        </StyledLoginForm>
+        </StyledCtaForm>
       )}
-      {subscribed && <p>Welcome! Thanks for subscribing!</p>}
+      {subscribed && (
+        <StyledWelcomeMessage
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: easeInOut }}
+        >
+          Welcome! Thanks for subscribing!
+        </StyledWelcomeMessage>
+      )}
     </>
   );
 };
