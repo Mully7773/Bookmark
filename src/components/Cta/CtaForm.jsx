@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import { useState } from 'react';
 import { easeInOut, motion } from 'framer-motion';
+import { Toaster, toast } from 'react-hot-toast';
 
 const StyledCtaForm = styled.form`
   & div {
@@ -49,6 +50,10 @@ const CtaForm = () => {
   const [form, setForm] = useState(INITIAL_FORM_STATE);
   const [subscribed, setSubscribed] = useState(false);
 
+  const emailValidation = new RegExp(
+    "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$"
+  );
+
   const handleChange = e => {
     setForm({
       ...form,
@@ -58,6 +63,12 @@ const CtaForm = () => {
 
   const handleFormSubmission = e => {
     e.preventDefault();
+    // Validate email address:
+    const isValidEmail = emailValidation.test(form.email);
+    if (!isValidEmail) {
+      toast.error('Please enter a valid email address!');
+      return;
+    }
     const userEmail = {
       email: form.email,
     };
@@ -92,6 +103,7 @@ const CtaForm = () => {
           Welcome! Thanks for subscribing!
         </StyledWelcomeMessage>
       )}
+      <Toaster position='bottom-right' reverseOrder={false} />
     </>
   );
 };
