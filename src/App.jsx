@@ -8,6 +8,7 @@ import Features from './components/Features/Features';
 import Extensions from './components/Extensions/Extensions';
 import Faq from './components/Faq/Faq';
 import Cta from './components/Cta/Cta';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const currentTheme = {
@@ -25,6 +26,7 @@ const App = () => {
         <Faq />
         <Cta />
       </MainWrapper>
+      <Footer />
     </ThemeProvider>
   );
 };

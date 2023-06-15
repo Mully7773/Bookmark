@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledNavBarContainer = styled.div`
   display: flex;
@@ -11,10 +11,10 @@ export const StyledNavBarContainer = styled.div`
 export const StyledLogoContainer = styled.div`
   height: 2.6rem;
   width: auto;
-
+  cursor: pointer;
   & svg {
     height: 100%;
-    width: 100%;
+    width: 16rem;
   }
 `;
 
@@ -22,6 +22,7 @@ export const StyledNavigation = styled.nav`
   display: flex;
   align-items: center;
   gap: 4.8rem;
+
   & ul {
     display: flex;
     gap: 4.8rem;
@@ -31,5 +32,20 @@ export const StyledNavigation = styled.nav`
       font-size: 1.4rem;
       letter-spacing: 0.1rem;
     }
+
+    & a {
+      transition: all 0.3s;
+      &:hover {
+        color: ${props => props.theme.secondary.linkHover};
+      }
+    }
   }
+
+  ${props =>
+    props.footer &&
+    css`
+      & a {
+        color: #fff;
+      }
+    `}
 `;

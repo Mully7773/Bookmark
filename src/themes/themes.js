@@ -46,6 +46,7 @@ export const mainTheme = {
     ctaBg: palette.primary[400],
   },
   secondary: {
+    linkHover: palette.secondary[400],
     ctaNavBtn: palette.secondary[400],
     ctaNavBtnHover: palette.secondary[400],
     ctaNavBtnBorder: palette.secondary[400],
@@ -61,6 +62,7 @@ export const mainTheme = {
     featureBtnActive: palette.neutral[600],
     faqBtn: palette.neutral[600],
     faqChevronHover: palette.neutral[600],
+    footerBg: palette.neutral[600],
     secondaryBtnColor: palette.neutral[300],
     pHeroColor: palette.neutral[200],
     featuresBtn: palette.neutral[200],
