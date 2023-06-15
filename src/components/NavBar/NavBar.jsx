@@ -19,7 +19,9 @@ const NavBar = () => {
         </StyledLogoContainer>
         <StyledNavigation>
           <Navigation />
-          <StyledLoginLink secondary>login</StyledLoginLink>
+          <StyledLoginLink href='#' secondary>
+            login
+          </StyledLoginLink>
         </StyledNavigation>
       </StyledNavBarContainer>
     </StyledHeader>

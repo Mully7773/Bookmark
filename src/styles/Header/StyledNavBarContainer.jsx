@@ -10,8 +10,13 @@ export const StyledNavBarContainer = styled.div`
 
 export const StyledLogoContainer = styled.div`
   height: 2.6rem;
-  width: auto;
+  width: 100%;
   cursor: pointer;
+  & a,
+  a:visited,
+  a:link {
+    display: unset;
+  }
   & svg {
     height: 100%;
     width: 16rem;
