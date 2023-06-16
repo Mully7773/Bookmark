@@ -13,6 +13,7 @@ export const base = {
   },
   boxShadow: {
     button: '0px 12px 15px .5px rgba(0, 0, 0, 0.12)',
+    navBar: '0px 2px 9px .2px rgba(0, 0, 0, 0.12)',
   },
   bp: {
     desktopL: `only screen and (max-width: ${bpSize.desktopL})`,

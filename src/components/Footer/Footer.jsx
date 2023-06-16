@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import FacebookIcon from '/src/assets/facebook.svg';
 import TwitterIcon from '/src/assets/twitter.svg';
 import BookmarkLogo from '/src/assets/logo-bookmark-white.svg';
