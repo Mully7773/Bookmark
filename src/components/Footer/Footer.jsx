@@ -7,39 +7,11 @@ import {
   StyledNavigation,
 } from '../../styles/Header/StyledNavBarContainer';
 import Navigation from '../NavBar/Navigation';
-
-const StyledFooter = styled.footer`
-  padding: 3.2rem;
-  background-color: ${props => props.theme.neutral.footerBg};
-`;
-
-const StyledContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 110rem;
-  margin: 0 auto;
-
-  & div {
-    display: flex;
-    gap: 4.2rem;
-  }
-`;
-
-const StyledSocialLinksContainer = styled.div`
-  width: 9.4rem;
-  height: auto;
-  & svg {
-    width: 100%;
-    height: 100%;
-    stroke: #fff;
-    transition: all 0.3s;
-    cursor: pointer;
-    &:hover {
-      stroke: ${props => props.theme.secondary.linkHover};
-    }
-  }
-`;
+import {
+  StyledFooter,
+  StyledContainer,
+  StyledSocialLinksContainer,
+} from '../../styles/Footer/StyledFooterLayout';
 
 const Footer = () => {
   return (
