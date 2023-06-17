@@ -76,6 +76,9 @@ h6 {
 p {
   color: ${props => props.theme.neutral.pHeroColor};
   font-size: 1.8rem;
+  @media ${props => props.theme.bp.tabletL} {
+    font-size: 1.6rem;
+  }
 }
 
 h2 {
@@ -84,6 +87,9 @@ h2 {
     font-weight: 500;
     font-size: 3rem;
     color: ${props => props.theme.neutral.h2Color};
+    @media ${props => props.theme.bp.tabletL} {
+    font-size: 2.7rem;
+  }
 }
 
 h3 {

@@ -7,4 +7,7 @@ export const StyledSectionHeading = styled.div`
   gap: 2rem;
   text-align: center;
   width: 50%;
+  @media ${props => props.theme.bp.tabletL} {
+    width: 75%;
+  }
 `;

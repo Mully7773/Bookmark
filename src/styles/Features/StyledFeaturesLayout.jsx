@@ -9,4 +9,7 @@ export const StyledFeaturesSection = styled(motion.section)`
   justify-items: center;
   align-items: center;
   padding-bottom: 18rem;
+  @media ${props => props.theme.bp.tabletL} {
+    max-width: 70rem;
+  }
 `;

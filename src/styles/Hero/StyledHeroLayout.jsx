@@ -15,4 +15,11 @@ export const StyledHeroLayout = styled.section`
   @media ${props => props.theme.bp.desktopL} {
     padding-top: 2rem;
   }
+
+  @media ${props => props.theme.bp.tabletL} {
+    grid-template-columns: 1fr 1fr;
+    max-width: 70rem;
+    padding-top: 5rem;
+    padding-bottom: 38rem;
+  }
 `;

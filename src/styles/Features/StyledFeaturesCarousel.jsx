@@ -7,6 +7,9 @@ export const StyledTabsContainer = styled.div`
   width: 70%;
   max-width: 85rem;
   text-align: center;
+  @media ${props => props.theme.bp.tabletL} {
+    width: 90%;
+  }
 `;
 
 export const StyledCarouselControls = styled.div`
@@ -42,10 +45,22 @@ export const StyledCarouselContent = styled.div`
     background-color: ${props => props.theme.primary.heroBg};
     border-radius: 50rem;
     z-index: -1;
+
+    @media ${props => props.theme.bp.tabletL} {
+      height: 75%;
+    }
+  }
+
+  @media ${props => props.theme.bp.tabletL} {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
   }
 `;
 
-export const StyledCarouselImgContainer = styled(motion.div)``;
+export const StyledCarouselImgContainer = styled(motion.div)`
+  width: 32rem;
+  height: auto;
+`;
 
 export const StyledCarouselTextContainer = styled(motion.div)`
   display: flex;
@@ -59,5 +74,12 @@ export const StyledCarouselTextContainer = styled(motion.div)`
 
   & p {
     margin-bottom: 2.5rem;
+    @media ${props => props.theme.bp.tabletL} {
+      margin-bottom: 1rem;
+    }
+  }
+  @media ${props => props.theme.bp.tabletL} {
+    padding: 0;
+    padding-bottom: 4rem;
   }
 `;

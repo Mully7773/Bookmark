@@ -1,5 +1,6 @@
 const bpSize = {
   desktopL: '87.5em', //1400px
+  tabletL: '48em', //768px
 };
 
 export const base = {
@@ -17,6 +18,7 @@ export const base = {
   },
   bp: {
     desktopL: `only screen and (max-width: ${bpSize.desktopL})`,
+    tabletL: `only screen and (max-width: ${bpSize.tabletL})`,
   },
 };
 

@@ -13,10 +13,16 @@ export const StyledHeroHeading = styled.h1`
   line-height: 1.2;
   color: ${props => props.theme.neutral.h1Color};
   font-weight: 500;
+  @media ${props => props.theme.bp.tabletL} {
+    font-size: 3rem;
+  }
 `;
 
 export const StyledSupplementaryParagraph = styled.p`
   max-width: 50rem;
+  @media ${props => props.theme.bp.tabletL} {
+    font-size: 1.6rem;
+  }
 `;
 
 export const StyledButtonGroup = styled.div`
