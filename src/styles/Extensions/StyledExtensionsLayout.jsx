@@ -13,4 +13,8 @@ export const StyledExtensionsSection = styled(motion.section)`
   & p {
     margin-bottom: 4rem;
   }
+  @media ${props => props.theme.bp.tabletL} {
+    grid-template-columns: 1fr;
+    padding-bottom: 28rem;
+  }
 `;
