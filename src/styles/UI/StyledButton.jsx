@@ -12,6 +12,11 @@ export const StyledButton = styled.button`
   outline: solid 2px ${props => props.theme.primary.btnPrimary};
   transition: all 0.3s;
 
+  @media ${props => props.theme.bp.mobile} {
+    font-size: 1.2rem;
+    padding: 0.7rem 1.6rem;
+  }
+
   &:hover {
     background-color: #fff;
     color: ${props => props.theme.primary.btnPrimary};

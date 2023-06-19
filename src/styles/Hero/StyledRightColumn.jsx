@@ -18,5 +18,16 @@ export const StyledRightColumn = styled(motion.div)`
     transform: translateX(8rem);
     height: 100%;
     width: 100%;
+    @media ${props => props.theme.bp.mobile} {
+      transform: translateX(0);
+      width: 95%;
+      padding-left: 5%;
+    }
+  }
+
+  @media ${props => props.theme.bp.mobile} {
+    grid-row: 1 / 2;
+    transform: translateX(0);
+    position: relative;
   }
 `;

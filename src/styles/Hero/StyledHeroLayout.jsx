@@ -22,4 +22,11 @@ export const StyledHeroLayout = styled.section`
     padding-top: 5rem;
     padding-bottom: 38rem;
   }
+  @media ${props => props.theme.bp.mobile} {
+    grid-template-columns: 1fr;
+    max-width: 65rem;
+    padding-top: 1rem;
+    padding-bottom: 70rem;
+    gap: 7rem;
+  }
 `;

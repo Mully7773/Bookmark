@@ -16,6 +16,10 @@ export const StyledHeroHeading = styled.h1`
   @media ${props => props.theme.bp.tabletL} {
     font-size: 3rem;
   }
+  @media ${props => props.theme.bp.mobile} {
+    font-size: 2.8rem;
+    text-align: center;
+  }
 `;
 
 export const StyledSupplementaryParagraph = styled.p`
@@ -23,9 +27,15 @@ export const StyledSupplementaryParagraph = styled.p`
   @media ${props => props.theme.bp.tabletL} {
     font-size: 1.6rem;
   }
+  @media ${props => props.theme.bp.mobile} {
+    text-align: center;
+  }
 `;
 
 export const StyledButtonGroup = styled.div`
   display: flex;
   gap: 2rem;
+  @media ${props => props.theme.bp.mobile} {
+    justify-content: center;
+  }
 `;
