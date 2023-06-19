@@ -6,6 +6,7 @@ import { StyledFeaturesSection } from '../../styles/Features/StyledFeaturesLayou
 const Features = () => {
   return (
     <StyledFeaturesSection
+      id='features'
       initial={{ opacity: 0 }}
       whileInView={{
         opacity: 1,

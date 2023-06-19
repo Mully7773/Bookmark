@@ -44,6 +44,24 @@ export const StyledNavigation = styled.nav`
         color: ${props => props.theme.secondary.linkHover};
       }
     }
+    @media ${props => props.theme.bp.mobile} {
+      display: none;
+      ${props =>
+        props.mobileNav &&
+        css`
+          background-color: #fff;
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 30;
+          flex-direction: column;
+        `}
+    }
   }
 
   ${props =>

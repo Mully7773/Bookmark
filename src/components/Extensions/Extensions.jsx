@@ -6,6 +6,7 @@ import { StyledExtensionsSection } from '../../styles/Extensions/StyledExtension
 const Extensions = () => {
   return (
     <StyledExtensionsSection
+      id='extensions'
       initial={{ opacity: 0 }}
       whileInView={{
         opacity: 1,

@@ -29,4 +29,8 @@ export const StyledLoginLink = styled.a`
       background: ${props => props.theme.secondary.ctaNavBtn};
       color: #fff;
     `}
+
+    @media ${props => props.theme.bp.mobile} {
+    display: none !important;
+  }
 `;

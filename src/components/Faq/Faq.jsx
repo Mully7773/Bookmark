@@ -1,5 +1,4 @@
-import { motion, easeInOut } from 'framer-motion';
-import styled from 'styled-components';
+import { easeInOut } from 'framer-motion';
 import FaqHeading from './FaqHeading';
 import FaqContent from './FaqContent';
 import { StyledFaqSection } from '../../styles/Faq/StyledFaqLayout';
@@ -8,6 +7,7 @@ import { StyledButton } from '../../styles/UI/StyledButton';
 const Faq = () => {
   return (
     <StyledFaqSection
+      id='faq'
       initial={{ opacity: 0 }}
       whileInView={{
         opacity: 1,
