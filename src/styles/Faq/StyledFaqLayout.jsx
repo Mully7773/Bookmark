@@ -9,6 +9,9 @@ export const StyledFaqSection = styled(motion.section)`
   justify-items: center;
   align-items: center;
   padding-bottom: 11rem;
+  @media ${props => props.theme.bp.mobile} {
+    max-width: 48rem;
+  }
 
   & div {
     & p {

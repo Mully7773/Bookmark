@@ -14,7 +14,18 @@ export const StyledAccordionItem = styled.li`
     props.first &&
     css`
       border-top: 1px solid ${props => props.theme.neutral.faqBorders};
+      @media ${props => props.theme.bp.mobile} {
+        border-top: unset;
+      }
     `}
+
+  & button {
+    @media ${props => props.theme.bp.mobile} {
+      font-size: 1.5rem;
+      padding-top: 1.2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
 `;
 
 export const StyledChevronContainer = styled(motion.div)`
@@ -38,4 +49,13 @@ export const StyledChevronContainer = styled(motion.div)`
     `}
 `;
 
-export const StyledAccordionContentContainer = styled(motion.div)``;
+export const StyledAccordionContentContainer = styled(motion.div)`
+  @media ${props => props.theme.bp.mobile} {
+    max-width: 48rem;
+  }
+  & p {
+    @media ${props => props.theme.bp.mobile} {
+      font-size: 1.4rem;
+    }
+  }
+`;

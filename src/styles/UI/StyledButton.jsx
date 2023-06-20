@@ -91,7 +91,11 @@ export const StyledButton = styled.button`
       color: ${props => props.theme.neutral.faqBtn};
       box-shadow: unset;
       width: 100%;
-    padding: 23px 24px 19px 0;
+    padding: 2.3rem 2.4rem 1.9rem 0;
+    @media ${props => props.theme.bp.mobile} {
+    padding-left: 0;
+    padding-right: 0;
+  }
 };
       &:hover {
         color: unset;
