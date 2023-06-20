@@ -15,6 +15,17 @@ export const StyledTabsContainer = styled.div`
 export const StyledCarouselControls = styled.div`
   display: flex;
   border-bottom: 1.5px solid #eee;
+  @media ${props => props.theme.bp.mobile} {
+    flex-direction: column;
+    border-bottom: unset;
+  }
+
+  & button {
+    @media ${props => props.theme.bp.mobile} {
+      font-size: 1.6rem;
+      border-bottom: 1.5px solid #eee;
+    }
+  }
 `;
 
 export const StyledTabBar = styled(motion.div)`
@@ -35,6 +46,7 @@ export const StyledCarouselContent = styled.div`
   display: grid;
   grid-template-columns: 62rem 1fr;
   align-items: center;
+
   &::before {
     content: '';
     position: absolute;
@@ -49,17 +61,32 @@ export const StyledCarouselContent = styled.div`
     @media ${props => props.theme.bp.tabletL} {
       height: 75%;
     }
+
+    @media ${props => props.theme.bp.mobile} {
+      top: 0%;
+      height: 55%;
+      right: 27%;
+    }
   }
 
   @media ${props => props.theme.bp.tabletL} {
     grid-template-columns: 1fr 1fr;
     height: auto;
   }
+  @media ${props => props.theme.bp.mobile} {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 9rem;
+  }
 `;
 
 export const StyledCarouselImgContainer = styled(motion.div)`
   width: 32rem;
   height: auto;
+  @media ${props => props.theme.bp.mobile} {
+    width: 36rem;
+    padding-top: 2rem;
+  }
 `;
 
 export const StyledCarouselTextContainer = styled(motion.div)`
@@ -81,5 +108,11 @@ export const StyledCarouselTextContainer = styled(motion.div)`
   @media ${props => props.theme.bp.tabletL} {
     padding: 0;
     padding-bottom: 4rem;
+  }
+  @media ${props => props.theme.bp.mobile} {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 45rem;
   }
 `;

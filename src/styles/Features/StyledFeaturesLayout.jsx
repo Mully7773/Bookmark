@@ -12,4 +12,8 @@ export const StyledFeaturesSection = styled(motion.section)`
   @media ${props => props.theme.bp.tabletL} {
     max-width: 70rem;
   }
+  @media ${props => props.theme.bp.mobile} {
+    grid-template-columns: 1fr;
+    padding-bottom: 9rem;
+  }
 `;
