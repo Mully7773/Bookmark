@@ -14,6 +14,9 @@ export const StyledCtaForm = styled.form`
       padding-left: 2rem;
       font-size: 1.4rem;
       width: 100%;
+      @media ${props => props.theme.bp.mobile} {
+        font-size: 1.2rem;
+      }
       :focus {
         outline: 0.2rem dashed ${props => props.theme.secondary.inputFocus};
         outline-offset: 0.3rem;
@@ -29,6 +32,10 @@ export const StyledCtaForm = styled.form`
         outline-offset: 0.3rem;
       }
     }
+
+    @media ${props => props.theme.bp.mobile} {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -37,4 +44,7 @@ export const StyledWelcomeMessage = styled(motion.p)`
   font-weight: 500;
   color: #fff;
   padding-bottom: 1rem;
+  @media ${props => props.theme.bp.mobile} {
+    font-size: 1.8rem;
+  }
 `;
