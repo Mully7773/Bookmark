@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const StyledFooter = styled.footer`
   padding: 3.2rem;
   background-color: ${props => props.theme.neutral.footerBg};
+  @media ${props => props.theme.bp.mobile} {
+    padding: 5rem 3.2rem;
+  }
 `;
 
 export const StyledContainer = styled.div`
@@ -15,6 +18,16 @@ export const StyledContainer = styled.div`
   & div {
     display: flex;
     gap: 4.2rem;
+    @media ${props => props.theme.bp.mobile} {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media ${props => props.theme.bp.mobile} {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
   }
 `;
 
@@ -30,5 +43,11 @@ export const StyledSocialLinksContainer = styled.div`
     &:hover {
       stroke: ${props => props.theme.secondary.linkHover};
     }
+  }
+  @media ${props => props.theme.bp.mobile} {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 9.4rem;
+    height: 2.4rem;
   }
 `;

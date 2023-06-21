@@ -36,6 +36,9 @@ export const StyledNavigation = styled.nav`
       text-transform: uppercase;
       font-size: 1.4rem;
       letter-spacing: 0.1rem;
+      @media ${props => props.theme.bp.mobile} {
+        font-size: 1.6rem;
+      }
     }
 
     & a {
@@ -60,6 +63,15 @@ export const StyledNavigation = styled.nav`
           right: 0;
           z-index: 30;
           flex-direction: column;
+        `}
+
+      ${props =>
+        props.footer &&
+        css`
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          text-align: center;
         `}
     }
   }
