@@ -11,8 +11,21 @@ import {
   StyledCarouselImgContainer,
   StyledCarouselTextContainer,
 } from '../../styles/Features/StyledFeaturesCarousel';
+import { toast } from 'react-hot-toast';
 
 const FeaturesCarousel = () => {
+  const notify = () =>
+    toast(t => (
+      <span
+        style={{
+          color: 'purple',
+          textTransform: 'unset',
+          letterSpacing: 'unset',
+        }}
+      >
+        More information coming <b>soon!</b>
+      </span>
+    ));
   const [selectedTab, setSelectedTab] = useState(featuresData[0]);
   return (
     <>
@@ -57,7 +70,9 @@ const FeaturesCarousel = () => {
           >
             <h2> {selectedTab ? selectedTab.title : null}</h2>
             <p> {selectedTab ? selectedTab.text : null} </p>
-            <StyledButton more>more info</StyledButton>
+            <StyledButton onClick={notify} more>
+              more info
+            </StyledButton>
           </StyledCarouselTextContainer>
         </AnimatePresence>
       </StyledCarouselContent>

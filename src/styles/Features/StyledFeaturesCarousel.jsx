@@ -81,8 +81,16 @@ export const StyledCarouselContent = styled.div`
 `;
 
 export const StyledCarouselImgContainer = styled(motion.div)`
-  width: 32rem;
+  width: 55rem;
   height: auto;
+  @media ${props => props.theme.bp.desktopL} {
+    width: 50rem;
+    height: auto;
+  }
+  @media ${props => props.theme.bp.tabletL} {
+    width: 30rem;
+    height: auto;
+  }
   @media ${props => props.theme.bp.mobile} {
     width: 36rem;
     padding-top: 2rem;

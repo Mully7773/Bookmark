@@ -3,8 +3,22 @@ import FaqHeading from './FaqHeading';
 import FaqContent from './FaqContent';
 import { StyledFaqSection } from '../../styles/Faq/StyledFaqLayout';
 import { StyledButton } from '../../styles/UI/StyledButton';
+import { toast } from 'react-hot-toast';
 
 const Faq = () => {
+  const notify = () =>
+    toast(t => (
+      <span
+        style={{
+          color: 'purple',
+          textTransform: 'unset',
+          letterSpacing: 'unset',
+        }}
+      >
+        More information coming <b>soon!</b>
+      </span>
+    ));
+
   return (
     <StyledFaqSection
       id='faq'
@@ -21,7 +35,7 @@ const Faq = () => {
     >
       <FaqHeading />
       <FaqContent />
-      <StyledButton>More Info</StyledButton>
+      <StyledButton onClick={notify}>More Info</StyledButton>
     </StyledFaqSection>
   );
 };

@@ -2,8 +2,10 @@ import { easeInOut } from 'framer-motion';
 import { extensionsData } from '../../data/extensionsData';
 import { StyledButton } from '../../styles/UI/StyledButton';
 import { StyledExtensionCard } from '../../styles/Extensions/StyledExtensionsCard';
+import { toast } from 'react-hot-toast';
 
 const ExtensionsCard = () => {
+  const notify = () => toast.success('Successfully added extension!');
   return (
     <>
       {extensionsData.map(card => {
@@ -29,7 +31,7 @@ const ExtensionsCard = () => {
               <p>Minimum version {card.versionNumber}</p>
             </div>
             <footer>
-              <StyledButton>{card.button}</StyledButton>
+              <StyledButton onClick={notify}>{card.button}</StyledButton>
             </footer>
           </StyledExtensionCard>
         );
