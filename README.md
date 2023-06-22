@@ -13,7 +13,7 @@
 <br/>
 <br/>
 
-<div align="center"><img src="src/assets/images/screenshots/hero.png" alt="Screenshot of hero section"></img>
+<div align="center"><img src="src/assets/screenshots/hero-desktop.png" alt="Screenshot of hero section"></img>
 
 </div>
 <br/>
@@ -46,33 +46,33 @@ https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda3258
 
 ## 📷 Screenshots
 
-### About
+### Features
 
-<img src="src/assets/images/screenshots/about.png" alt="Screenshot of about section" style='width: 100%'/>
+<img src="src/assets/screenshots/features-desktop.png" alt="Screenshot of features section" style='width: 100%'/>
 </br>
 </br>
 
-### Technology
+### Extensions
 
-<img src="src/assets/images/screenshots/tech.png" alt="Screenshot of technology section" style='width: 100%'/>
+<img src="src/assets/screenshots/extensions-desktop.png" alt="Screenshot of technology section" style='width: 100%'/>
 </br>
 </br>
 
-### Projects
+### Faq
 
-<img src="src/assets/images/screenshots/projects.png" alt="Screenshot of projects section" style='width: 100%'/>
+<img src="src/assets/screenshots/faq-desktop.png" alt="Screenshot of projects section" style='width: 100%'/>
 </br>
 </br>
 
-### More Projects
+### CTA & Footer
 
-<img src="src/assets/images/screenshots/more_projects.png" alt="Screenshot of additional projects section" style='width: 100%'/>
+<img src="src/assets/screenshots/cta-footer-desktop.png" alt="Screenshot of additional projects section" style='width: 100%'/>
 </br>
 </br>
 
-### Footer
+### Hero (mobile)
 
-<img src="src/assets/images/screenshots/footer.png" alt="Screenshot of footer" style='width: 100%; height: 50%'/>
+<img src="src/assets/screenshots/hero-mobile.png" alt="Screenshot of footer" style='width: 40%; height: 50%'/>
 </br>
 </br>
 
